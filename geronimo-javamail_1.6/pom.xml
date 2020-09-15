@@ -35,9 +35,10 @@
     </description>
 
     <scm>
-        <connection>scm:svn:http://svn.apache.org/repos/asf/geronimo/javamail/trunk/geronimo-javamail_1.6</connection>
-        <developerConnection>scm:svn:https://svn.apache.org/repos/asf/geronimo/javamail/trunk/geronimo-javamail_1.6</developerConnection>
-        <url>http://svn.apache.org/viewvc/geronimo/javamail/trunk/geronimo-javamail_1.6</url>
+        <connection>scm:git:git@github.com:tomitribe/geronimo-javamail.git</connection>
+        <developerConnection>scm:git:git@github.com:tomitribe/geronimo-javamail.git</developerConnection>
+        <url>scm:git:git@github.com:tomitribe/geronimo-javamail.git</url>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>
@@ -48,11 +49,26 @@
     <url>http://geronimo.apache.org/maven/${siteId}/${project.version}</url>
 
     <distributionManagement>
-        <site>
-            <id>apache-website</id>
-            <url>${site.deploy.url}/maven/${siteId}/${project.version}</url>
-        </site>
+        <repository>
+            <id>tomitribe.releases.https</id>
+            <name>Tomitribe Release Distribution Repository</name>
+            <url>https://repository.tomitribe.com/service/local/staging/deploy/maven2</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>tomitribe.snapshots.https</id>
+            <name>Tomitribe Development Snapshot Repository</name>
+            <url>https://repository.tomitribe.com/content/repositories/snapshots-tomitribe</url>
+        </snapshotRepository>
     </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>tomitribe-all</id>
+            <name>Tomitribe Repository</name>
+            <url>https://repository.tomitribe.com/content/groups/tomitribe/</url>
+        </repository>
+    </repositories>
 
     <dependencyManagement>
         <dependencies>
@@ -65,7 +81,7 @@
             <dependency>
                 <groupId>org.apache.geronimo.specs</groupId>
                 <artifactId>geronimo-javamail_1.6_spec</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>0.0.1-TT.M1</version>
             </dependency>
 
             <dependency>
@@ -180,6 +196,11 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
             </plugin>
         </plugins>
     </build>
