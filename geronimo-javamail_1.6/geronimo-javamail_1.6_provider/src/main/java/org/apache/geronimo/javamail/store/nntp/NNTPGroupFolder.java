@@ -307,8 +307,8 @@ public class NNTPGroupFolder extends NNTPFolder {
     }
 
     /**
-     * @see javax.mail.Folder#fetch(javax.mail.Message[],
-     *      javax.mail.FetchProfile)
+     * @see javax.mail.Folder#fetch(Message[],
+     *      FetchProfile)
      * 
      * The JavaMail API recommends that this method be overrident to provide a
      * meaningfull implementation.

@@ -141,7 +141,7 @@ public class NNTPMessage extends MimeMessage {
     }
 
     /**
-     * @see javax.mail.internet.MimeMessage#getContentStream()
+     * @see MimeMessage#getContentStream()
      */
     protected InputStream getContentStream() throws MessagingException {
         // get the article information.

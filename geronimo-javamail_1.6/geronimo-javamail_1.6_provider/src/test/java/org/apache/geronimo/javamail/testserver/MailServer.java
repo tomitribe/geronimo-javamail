@@ -159,7 +159,7 @@ public class MailServer {
 
         smtpServer = new SMTPServer() {
             @Override
-            protected java.lang.Class<? extends org.apache.james.protocols.lib.handler.HandlersPackage> getJMXHandlersPackage() {
+            protected Class<? extends org.apache.james.protocols.lib.handler.HandlersPackage> getJMXHandlersPackage() {
                 return RefinedJMXHandlersLoader.class;
             };
 

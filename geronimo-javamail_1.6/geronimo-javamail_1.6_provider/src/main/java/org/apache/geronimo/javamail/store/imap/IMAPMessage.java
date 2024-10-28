@@ -215,7 +215,7 @@ public class IMAPMessage extends MimeMessage {
      * @return An InputStream instance for accessing the content
      *         (body) of the message.
      * @exception MessagingException
-     * @see javax.mail.internet.MimeMessage#getContentStream()
+     * @see MimeMessage#getContentStream()
      */
 	protected InputStream getContentStream() throws MessagingException {
 

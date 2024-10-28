@@ -310,7 +310,7 @@ public class IMAPStore extends Store implements QuotaAwareStore, IMAPUntaggedRes
      * @return An array of Quota objects defined for the root.
      * @throws MessagingException if the quotas cannot be retrieved
      */
-    public Quota[] getQuota(String root) throws javax.mail.MessagingException {
+    public Quota[] getQuota(String root) throws MessagingException {
         // get our private connection for access 
         IMAPConnection connection = getStoreConnection(); 
         try {
@@ -328,7 +328,7 @@ public class IMAPStore extends Store implements QuotaAwareStore, IMAPUntaggedRes
      * @param quota  The source quota item.
      * @throws MessagingException if the quota cannot be set
      */
-    public void setQuota(Quota quota) throws javax.mail.MessagingException {
+    public void setQuota(Quota quota) throws MessagingException {
         // get our private connection for access 
         IMAPConnection connection = getStoreConnection(); 
         try {

@@ -34,7 +34,7 @@ import org.apache.geronimo.mail.util.SessionUtil;
  * The base NNTP implementation of the javax.mail.Folder This is a base class
  * for both the Root NNTP server and each NNTP group folder.
  * 
- * @see javax.mail.Folder
+ * @see Folder
  * 
  * @version $Rev$
  */

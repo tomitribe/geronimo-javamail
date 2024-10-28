@@ -34,7 +34,7 @@ import org.apache.geronimo.javamail.transport.nntp.NNTPConnection;
  * The base NNTP implementation of the javax.mail.Folder This is a base class
  * for both the Root NNTP server and each NNTP group folder.
  * 
- * @see javax.mail.Folder
+ * @see Folder
  * 
  * @version $Rev$
  */
@@ -239,7 +239,7 @@ public class NNTPFolder extends Folder {
     }
 
     /**
-     * @see javax.mail.Folder#open(int)
+     * @see Folder#open(int)
      */
     public void open(int mode) throws MessagingException {
 
@@ -333,7 +333,7 @@ public class NNTPFolder extends Folder {
      * Checks wether the message is in cache, if not will create a new message
      * object and return it.
      * 
-     * @see javax.mail.Folder#getMessage(int)
+     * @see Folder#getMessage(int)
      */
     public Message getMessage(int msgNum) throws MessagingException {
         // for the base, we just throw an exception.
@@ -385,8 +385,8 @@ public class NNTPFolder extends Folder {
     }
 
     /**
-     * @see javax.mail.Folder#notifyMessageChangedListeners(int,
-     *      javax.mail.Message)
+     * @see Folder#notifyMessageChangedListeners(int,
+     *      Message)
      * 
      * this method is protected and cannot be used outside of Folder, therefore
      * had to explicitly expose it via a method in NNTPFolder, so that

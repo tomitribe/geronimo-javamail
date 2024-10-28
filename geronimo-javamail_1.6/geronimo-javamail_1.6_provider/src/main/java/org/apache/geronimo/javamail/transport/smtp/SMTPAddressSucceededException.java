@@ -44,7 +44,7 @@ public class SMTPAddressSucceededException extends MessagingException {
      * @param err
      *            An error message for the exception.
      */
-    SMTPAddressSucceededException(InternetAddress addr, java.lang.String cmd, int rc, java.lang.String err) {
+    SMTPAddressSucceededException(InternetAddress addr, String cmd, int rc, String err) {
         super(err);
         this.cmd = cmd;
         this.rc = rc;

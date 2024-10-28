@@ -47,8 +47,9 @@ public class SMTPSendFailedException extends SendFailedException {
      * @param inv
      *            An array of addresses deemed invalid.
      */
-    SMTPSendFailedException(java.lang.String cmd, int rc, java.lang.String err, java.lang.Exception ex, Address[] vs,
-            Address[] vus, Address[] inv) {
+    SMTPSendFailedException(
+        String cmd, int rc, String err, Exception ex, Address[] vs,
+        Address[] vus, Address[] inv) {
         super(err, ex, vs, vus, inv);
         this.cmd = cmd;
         this.rc = rc;

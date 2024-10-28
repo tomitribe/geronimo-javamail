@@ -44,7 +44,7 @@ public class SMTPAddressFailedException extends MessagingException {
      * @param err
      *            An error message for the exception.
      */
-    SMTPAddressFailedException(InternetAddress addr, java.lang.String cmd, int rc, java.lang.String err) {
+    SMTPAddressFailedException(InternetAddress addr, String cmd, int rc, String err) {
         super(err);
         this.cmd = cmd;
         this.rc = rc;

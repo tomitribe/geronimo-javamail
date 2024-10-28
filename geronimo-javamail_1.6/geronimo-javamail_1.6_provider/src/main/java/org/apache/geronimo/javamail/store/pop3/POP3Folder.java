@@ -43,7 +43,7 @@ import org.apache.geronimo.javamail.store.pop3.connection.POP3StatusResponse;
  * <url>http://www.faqs.org/rfcs/rfc1939.html</url>
  * </p>
  * 
- * @see javax.mail.Folder
+ * @see Folder
  * 
  * @version $Rev$ $Date$
  */
@@ -191,7 +191,7 @@ public class POP3Folder extends Folder {
     }
 
     /**
-     * @see javax.mail.Folder#open(int)
+     * @see Folder#open(int)
      */
     public void open(int mode) throws MessagingException {
         // Can only be performed on a closed folder
@@ -369,7 +369,7 @@ public class POP3Folder extends Folder {
      * Checks wether the message is in cache, if not will create a new message
      * object and return it.
      * 
-     * @see javax.mail.Folder#getMessage(int)
+     * @see Folder#getMessage(int)
      */
     public Message getMessage(int msgNum) throws MessagingException {
         // Can only be performed on an Open folder
@@ -403,8 +403,8 @@ public class POP3Folder extends Folder {
     }
 
     /**
-     * @see javax.mail.Folder#fetch(javax.mail.Message[],
-     *      javax.mail.FetchProfile)
+     * @see Folder#fetch(Message[],
+     *      FetchProfile)
      * 
      * The JavaMail API recommends that this method be overrident to provide a
      * meaningfull implementation.
@@ -474,8 +474,8 @@ public class POP3Folder extends Folder {
     }
 
     /**
-     * @see javax.mail.Folder#notifyMessageChangedListeners(int,
-     *      javax.mail.Message)
+     * @see Folder#notifyMessageChangedListeners(int,
+     *      Message)
      * 
      * this method is protected and cannot be used outside of Folder, therefore
      * had to explicitly expose it via a method in POP3Folder, so that

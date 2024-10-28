@@ -151,8 +151,8 @@ public class POP3Store extends Store {
 
     
     /**
-     * @see javax.mail.Service#protocolConnect(java.lang.String, int,
-     *      java.lang.String, java.lang.String)
+     * @see javax.mail.Service#protocolConnect(String, int,
+     *      String, String)
      */
     protected synchronized boolean protocolConnect(String host, int port, String username, String password) throws MessagingException {
         

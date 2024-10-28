@@ -43,7 +43,7 @@ public class AuthenticationTest extends TestCase {
         Properties props = new Properties();
         props.setProperty("mail.store.protocol", "imap");
         Session jmsession = Session.getInstance(props);
-        Assert.assertEquals(org.apache.geronimo.javamail.store.imap.IMAPStore.class, jmsession.getStore().getClass());
+        Assert.assertEquals(IMAPStore.class, jmsession.getStore().getClass());
         
     }
     

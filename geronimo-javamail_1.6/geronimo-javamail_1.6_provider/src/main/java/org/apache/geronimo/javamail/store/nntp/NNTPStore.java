@@ -107,7 +107,7 @@ public class NNTPStore extends Store {
     }
 
     /**
-     * @see javax.mail.Store#getDefaultFolder()
+     * @see Store#getDefaultFolder()
      * 
      * This returns a root folder object for all of the news groups.
      */

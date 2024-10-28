@@ -61,7 +61,7 @@ public class IssuesTest extends AbstractProtocolTest {
             Session session = Session.getInstance(props);
             MimeMessage message = new MimeMessage(session);
             message.setFrom(new InternetAddress("test@localhost"));
-            message.setRecipient(javax.mail.Message.RecipientType.TO, new InternetAddress("test@localhost"));
+            message.setRecipient(Message.RecipientType.TO, new InternetAddress("test@localhost"));
             message.setText("test");
 
             Transport.send(message);
@@ -110,7 +110,7 @@ public class IssuesTest extends AbstractProtocolTest {
 
             MimeMessage msg = new MimeMessage(session);
             msg.setSubject("a file for you");
-            msg.setRecipient(javax.mail.Message.RecipientType.TO, new InternetAddress("serveruser@localhost"));
+            msg.setRecipient(Message.RecipientType.TO, new InternetAddress("serveruser@localhost"));
             msg.setFrom(new InternetAddress("serveruser@localhost"));
 
             MimeBodyPart messageBodyPart = new MimeBodyPart();

@@ -41,7 +41,7 @@ import org.apache.geronimo.javamail.store.imap.connection.*;
 /**
  * The base IMAP implementation of the javax.mail.Folder
  * This is a base class for both the Root IMAP server and each IMAP group folder.
- * @see javax.mail.Folder
+ * @see Folder
  *
  * @version $Rev$
  */
@@ -1253,7 +1253,7 @@ public class IMAPFolder extends Folder implements UIDFolder, IMAPUntaggedRespons
      * Search the supplied messages for those that match the supplied criteria;
      * messages must belong to this folder.
      * The default implementation iterates through the messages, returning those
-     * whose {@link Message#match(javax.mail.search.SearchTerm)} method returns true;
+     * whose {@link Message#match(SearchTerm)} method returns true;
      * subclasses may provide a more efficient implementation.
      *
      * @param term the search criteria
@@ -1283,7 +1283,7 @@ public class IMAPFolder extends Folder implements UIDFolder, IMAPUntaggedRespons
      * Search the supplied messages for those that match the supplied criteria;
      * messages must belong to this folder.
      * The default implementation iterates through the messages, returning those
-     * whose {@link Message#match(javax.mail.search.SearchTerm)} method returns true;
+     * whose {@link Message#match(SearchTerm)} method returns true;
      * subclasses may provide a more efficient implementation.
      *
      * @param term the search criteria
@@ -1727,7 +1727,7 @@ public class IMAPFolder extends Folder implements UIDFolder, IMAPUntaggedRespons
      * @param type   The type of update made to the message.
      * @param m      The message that was updated.
      *
-     * @see javax.mail.Folder#notifyMessageChangedListeners(int, javax.mail.Message)
+     * @see Folder#notifyMessageChangedListeners(int, Message)
      */
     public void notifyMessageChangedListeners(int type, Message m) {
     	super.notifyMessageChangedListeners(type, m);
