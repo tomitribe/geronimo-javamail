@@ -28,7 +28,7 @@
     <name>Geronimo JavaMail 1.4</name>
     <packaging>pom</packaging>
 
-    <version>1.9.0-alpha-2-TT.1-SNAPSHOT</version>
+    <version>1.9.0-alpha-2-TT.1</version>
 
     <description>
         Geronimmo JavaMail Bundle.
@@ -37,7 +37,7 @@
         <connection>scm:git:git@github.com:tomitribe/geronimo-javamail.git</connection>
         <developerConnection>scm:git:git@github.com:tomitribe/geronimo-javamail.git</developerConnection>
         <url>scm:git:git@github.com:tomitribe/geronimo-javamail.git</url>
-        <tag>HEAD</tag>
+        <tag>geronimo-javamail_1.4-1.9.0-alpha-2-TT.1</tag>
     </scm>
 
     <properties>
