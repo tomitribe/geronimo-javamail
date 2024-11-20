@@ -43,7 +43,7 @@
     <properties>
         <siteId>javamail/${project.artifactId}</siteId>
         <projectName>Apache Geronimo Javamail Bundle</projectName>
-	<geronimo-javamail_1.6_spec.version>1.0.2-TT.2</geronimo-javamail_1.6_spec.version>
+	<geronimo-javamail_1.6_spec.version>1.0.2-TT.3</geronimo-javamail_1.6_spec.version>
     </properties>
 
     <url>http://geronimo.apache.org/maven/${siteId}/${project.version}</url>
@@ -81,7 +81,7 @@
             <dependency>
                 <groupId>org.apache.geronimo.specs</groupId>
                 <artifactId>geronimo-javamail_1.6_spec</artifactId>
-                <version>1.0.2-TT.1</version>
+                <version>1.0.2-TT.3</version>
             </dependency>
 
             <dependency>
